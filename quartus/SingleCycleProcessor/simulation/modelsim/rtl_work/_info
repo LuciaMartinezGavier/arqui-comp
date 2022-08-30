@@ -1,0 +1,63 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/simulation/modelsim
+vimem
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1661819294
+!i10b 1
+!s100 nbZ?>VeBaW_630eQEfO`Y0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IbUDCQRlMQNNYVB5h6j99n2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1661818899
+8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv
+F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv
+!i122 0
+L0 1 73
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1661819294.000000
+!s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor
+Z9 tCvgOpt 0
+vimem_tb
+R1
+R2
+!i10b 1
+!s100 I[WOTG0LDhOIH^9c1k0XB3
+R3
+IG;6FGl<:GOoP:zEJY`KzB2
+R4
+S1
+R0
+w1661819279
+8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem_tb.sv
+F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem_tb.sv
+!i122 1
+L0 1 103
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem_tb.sv|
+!i113 1
+R7
+R8
+R9

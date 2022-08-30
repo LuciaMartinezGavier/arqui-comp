@@ -1,0 +1,59 @@
+# do prueba_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/lucia/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp {/home/lucia/Documents/Arquitectura/arqui-comp/sillyfunction.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:45:00 on Aug 26,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp" /home/lucia/Documents/Arquitectura/arqui-comp/sillyfunction.sv 
+# -- Compiling module sillyfunction
+# 
+# Top level modules:
+# 	sillyfunction
+# End time: 09:45:00 on Aug 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp {/home/lucia/Documents/Arquitectura/arqui-comp/tb_sillyfunction.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:45:00 on Aug 26,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp" /home/lucia/Documents/Arquitectura/arqui-comp/tb_sillyfunction.sv 
+# -- Compiling module tb_sillyfunction
+# 
+# Top level modules:
+# 	tb_sillyfunction
+# End time: 09:45:00 on Aug 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_sillyfunction
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_sillyfunction 
+# Start time: 09:45:00 on Aug 26,2022
+# Loading sv_std.std
+# Loading work.tb_sillyfunction
+# Loading work.sillyfunction
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#          8 tests completed with          0 errors
+# ** Note: $finish    : /home/lucia/Documents/Arquitectura/arqui-comp/tb_sillyfunction.sv(54)
+#    Time: 105 ps  Iteration: 1  Instance: /tb_sillyfunction
+# 1
+# Break in Module tb_sillyfunction at /home/lucia/Documents/Arquitectura/arqui-comp/tb_sillyfunction.sv line 54
+# 
+# stdin: <EOF>
+add wave -position 4  -format Logic -height 19
+# Missing signal name or pattern.
+add wave -position 5  -format Logic -height 19
+# Missing signal name or pattern.
+# End time: 09:47:24 on Aug 26,2022, Elapsed time: 0:02:24
+# Errors: 0, Warnings: 0

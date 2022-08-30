@@ -1,0 +1,55 @@
+# do SingleCycleProcessor_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/lucia/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:28:14 on Aug 29,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv 
+# -- Compiling module imem
+# 
+# Top level modules:
+# 	imem
+# End time: 21:28:14 on Aug 29,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:28:14 on Aug 29,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem_tb.sv 
+# -- Compiling module imem_tb
+# 
+# Top level modules:
+# 	imem_tb
+# End time: 21:28:14 on Aug 29,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  imem_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" imem_tb 
+# Start time: 21:28:14 on Aug 29,2022
+# Loading sv_std.std
+# Loading work.imem_tb
+# Loading work.imem
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#         50 tests completed with          0 errors
+# ** Note: $stop    : /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem_tb.sv(91)
+#    Time: 501 ps  Iteration: 0  Instance: /imem_tb
+# Break in Module imem_tb at /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem_tb.sv line 91
+# 
+# stdin: <EOF>
+# A time value could not be extracted from the current line
+# End time: 21:28:32 on Aug 29,2022, Elapsed time: 0:00:18
+# Errors: 0, Warnings: 0
