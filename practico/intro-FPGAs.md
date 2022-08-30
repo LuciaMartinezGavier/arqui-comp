@@ -16,7 +16,7 @@ La diferencia está en cómo fueron fabricadas.
 
 ## ¿Cómo se configuran las FPGAs?
 * Configurables en campo "in the field" lo hace el desarrollador (miles de veces). 
-* Hay alginas que puden ser proegramadas una sola vez. OTP: One Time Programmable. 
+* Hay algunas que pueden ser programadas una sola vez. OTP: One Time Programmable. 
 * Si un dispositivo puede ser programado mientras embebido en un sistema mayor, se dice que es ISP (In System Programmable)
 
 ## Elementos básicos de una FPGA
@@ -33,7 +33,7 @@ Secreto de los fabricantes: como se configura. Cómo se modifica el hardware de 
 
 ### LUT (elementos lógicos) Look up table
 Memoria con la tabla de verdad de 2³ = 8 o 2⁴ = 16 casos.
-Se implementa con un multiplexor
+Se implementa con un multiplexor.
 
 Todas las FPGA se basan en arrays de pequeños elementos de lógica digital.
 Para usar un determinado dispositivo, los problemas de lógica digital deben ser

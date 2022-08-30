@@ -32,6 +32,12 @@ aprobados.
 con 4.
  
 ## 📑️ Programa
+
+### Introducción
++ ✅️ Repaso: [[LEGv8-ISA]]
++ ✅️ Hardware Description Languages (HDL): [[hdl-verilog]]
++ ✅️ Introducción a las FPGAs: [[intro-FPGAs]]
+
 ### **Computación SISD ("Single Instruction, Single Data")**
 + ⬜️ Arquitecturas tipo SISD, subtipo RISC (Reduced Instruction Set Computer)
 + ⬜️ Arquitecturas tipo SISD, Subtipo CISC (Complex Instruction Set Computer)
