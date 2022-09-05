@@ -3,7 +3,7 @@ module imem_tb ();
     logic [5:0] addr;
     logic [31:0] q, qexpected; // N = 32 as default
     logic [31:0] vectornum, errors; //bookkeeping variables
-    logic [127:0] testvectors [0:49] = '{
+    logic [37:0] testvectors [0:49] = '{
         {6'd00, 32'hf8000001},        // STUR X1, [X0, #0]
         {6'd01, 32'hf8008002},        // STUR X2, [X0, #8]
         {6'd02, 32'hf8000203},        // STUR X3, [X16, #0]
@@ -81,23 +81,21 @@ module imem_tb ();
         end
 
     // check results on rising edge of clk
-    always @(posedge clk) begin
-        #1;
+    always @(posedge clk)
+        if (~reset) begin
+            #1;
+            // if is undefined, finish
+            if (testvectors[vectornum] === 'bx) begin
+                $display("%d tests completed with %d errors",
+                                vectornum, errors);
+                $stop; // Usar $stop para que no se cierre ModelSim
+            end
 
-        // if is undefined, finish
-        if (testvectors[vectornum] === 'bx) begin
-            $display("%d tests completed with %d errors",
-                        vectornum, errors);
-            $stop; // Usar $stop para que no se cierre ModelSim
-        end
-
-        if (q !== qexpected)
-            begin
+            if (q !== qexpected) begin
                 $display("Error: inputs = %h", {addr});
                 $display("outputs = %h (%h expected)",q ,qexpected);
                 errors = errors + 1;
             end
-
-    vectornum = vectornum + 1;
-    end
+            vectornum = vectornum + 1;
+        end
 endmodule
