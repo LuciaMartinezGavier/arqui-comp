@@ -1,3 +1,4 @@
+# ERROR: No extended dataflow license exists
 # do TestSinglCycleProcessor_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -11,187 +12,187 @@
 # 
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/sl2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:07 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/sl2.sv 
 # -- Compiling module sl2
 # 
 # Top level modules:
 # 	sl2
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:07 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/signext.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:07 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/signext.sv 
 # -- Compiling module signext
 # 
 # Top level modules:
 # 	signext
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:07 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/mux2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:07 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/mux2.sv 
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:07 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/regfile.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:07 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/regfile.sv 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:07 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/maindec.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:07 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/maindec.sv 
 # -- Compiling module maindec
 # 
 # Top level modules:
 # 	maindec
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:07 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:07 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv 
 # -- Compiling module imem
 # 
 # Top level modules:
 # 	imem
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:07 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/flopr.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:07 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/flopr.sv 
 # -- Compiling module flopr
 # 
 # Top level modules:
 # 	flopr
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:07 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/fetch.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:07 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/fetch.sv 
 # -- Compiling module fetch
 # 
 # Top level modules:
 # 	fetch
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:07 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/execute.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:07 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/execute.sv 
 # -- Compiling module execute
 # 
 # Top level modules:
 # 	execute
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:07 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:07 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/adder.sv 
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:07 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:08 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:08 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907 {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:08 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv 
 # -- Compiling module processor_arm
 # 
 # Top level modules:
 # 	processor_arm
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:08 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907 {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/memory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:08 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/memory.sv 
 # -- Compiling module memory
 # 
 # Top level modules:
 # 	memory
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:08 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907 {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/decode.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:08 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/decode.sv 
 # -- Compiling module decode
 # 
 # Top level modules:
 # 	decode
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:08 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907 {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:08 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:08 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907 {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:08 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/controller.sv 
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:08 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907 {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/aludec.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:08 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/aludec.sv 
 # -- Compiling module aludec
 # 
 # Top level modules:
 # 	aludec
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:08 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907 {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/writeback.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:08 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/writeback.sv 
 # -- Compiling module writeback
 # 
 # Top level modules:
 # 	writeback
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:08 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:08 on Sep 09,2022
 # vcom -reportprogress 300 -93 -work work /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -202,23 +203,23 @@
 # -- Compiling entity dmem
 # -- Compiling architecture behave of dmem
 # ** Warning: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd(30): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:08 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # 
 # vlog -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907 {/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:08 on Sep 09,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907" /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_tb.sv 
 # -- Compiling module processor_tb
 # 
 # Top level modules:
 # 	processor_tb
-# End time: 09:22:04 on Sep 09,2022, Elapsed time: 0:00:00
+# End time: 13:09:08 on Sep 09,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  processor_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" processor_tb 
-# Start time: 09:22:04 on Sep 09,2022
+# Start time: 13:09:08 on Sep 09,2022
 # Loading sv_std.std
 # Loading work.processor_tb
 # Loading work.processor_arm
@@ -254,9 +255,11 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # ** Note: fin del testdump
-#    Time: 520 ps  Iteration: 1  Instance: /processor_tb/dut/dataMem
+#    Time: 10020 ps  Iteration: 1  Instance: /processor_tb/dut/dataMem
 # ** Note: $stop    : /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_tb.sv(26)
-#    Time: 540 ps  Iteration: 0  Instance: /processor_tb
+#    Time: 10040 ps  Iteration: 0  Instance: /processor_tb
 # Break in Module processor_tb at /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_tb.sv line 26
 # 
 # stdin: <EOF>
+# End time: 13:09:48 on Sep 09,2022, Elapsed time: 0:00:40
+# Errors: 0, Warnings: 0

@@ -1,5 +1,5 @@
 Flow report for TestSinglCycleProcessor
-Fri Sep  9 09:21:48 2022
+Fri Sep  9 13:08:59 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,13 +41,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Sep  9 09:21:48 2022       ;
+; Flow Status                        ; Successful - Fri Sep  9 13:08:59 2022       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; TestSinglCycleProcessor                     ;
 ; Top-level Entity Name              ; processor_arm                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 12,178                                      ;
-;     Total combinational functions  ; 6,237                                       ;
+; Total logic elements               ; 11,976                                      ;
+;     Total combinational functions  ; 6,035                                       ;
 ;     Dedicated logic registers      ; 6,150                                       ;
 ; Total registers                    ; 6150                                        ;
 ; Total pins                         ; 132                                         ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+-------------------------+
 ; Option            ; Setting                 ;
 +-------------------+-------------------------+
-; Start date & time ; 09/09/2022 09:21:22     ;
+; Start date & time ; 09/09/2022 13:08:39     ;
 ; Main task         ; Compilation             ;
 ; Revision Name     ; TestSinglCycleProcessor ;
 +-------------------+-------------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+-------------------------+---------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value           ; Entity Name   ; Section Id                        ;
 +--------------------------------------+----------------------------------------+-------------------------+---------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 167417731879719.166272608207463        ; --                      ; --            ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 167417731879719.166273971923331        ; --                      ; --            ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                      ; --            ; processor_tb                      ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                      ; --            ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                      ; --            ; eda_board_design_boundary_scan    ;
@@ -101,8 +101,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 474 MB              ; 00:00:34                           ;
-; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:34                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 481 MB              ; 00:00:28                           ;
+; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

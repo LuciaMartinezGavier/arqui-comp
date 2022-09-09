@@ -1,0 +1,22 @@
+module imem #(parameter N = 32)
+                (input  logic [5:0] addr,
+                 output logic [N-1:0] q);
+
+    logic [N-1:0] ROM [0:63] = '{default: 32'h0};
+    initial begin
+        ROM [0:6] = {'
+            32'h8b1103e9,
+            32'h8b0103ea,
+            32'h8b10014a,
+            32'hcb010129,
+            32'hb4000049,
+            32'hb4ffffbf,
+            32'hf800000a
+        };
+    end
+
+    // FIXME: poner default 0 y después rellenar
+    always_comb begin
+        q = ROM[addr];
+    end
+endmodule

@@ -12,7 +12,7 @@ cModel Technology
 Z0 d/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/simulation/modelsim
 vadder
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1662726124
+Z2 !s110 1662739748
 !i10b 1
 !s100 a3zDN1NYD4EHE0kQDg6Iz2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -29,7 +29,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1662726124.000000
+Z6 !s108 1662739747.000000
 !s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/adder.sv|
 !i113 1
@@ -55,7 +55,7 @@ R5
 r1
 !s85 0
 31
-R6
+Z10 !s108 1662739748.000000
 !s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/alu.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/alu.sv|
 !i113 1
@@ -72,7 +72,7 @@ IAOJf=M478O@6RXWAi__OR1
 R4
 S1
 R0
-Z10 w1662552198
+Z11 w1662552198
 8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/aludec.sv
 F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/aludec.sv
 !i122 16
@@ -81,12 +81,12 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/aludec.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/aludec.sv|
 !i113 1
 R7
-Z11 !s92 -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907
+Z12 !s92 -sv -work work +incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907
 R9
 vcontroller
 R1
@@ -98,7 +98,7 @@ Ii2blD>Y]@dE`7b5d^ccFa2
 R4
 S1
 R0
-R10
+R11
 8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/controller.sv
 F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/controller.sv
 !i122 15
@@ -107,12 +107,12 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/controller.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/controller.sv|
 !i113 1
 R7
-R11
+R12
 R9
 vdatapath
 R1
@@ -124,7 +124,7 @@ I3TXJFJPHeeM@T4F2ljimz1
 R4
 S1
 R0
-R10
+R11
 8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv
 F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv
 !i122 14
@@ -133,12 +133,12 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv|
 !i113 1
 R7
-R11
+R12
 R9
 vdecode
 R1
@@ -150,7 +150,7 @@ IcNPh_Ri0[`<CIKfIfU=k=0
 R4
 S1
 R0
-R10
+R11
 8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/decode.sv
 F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/decode.sv
 !i122 13
@@ -159,63 +159,63 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/decode.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/decode.sv|
 !i113 1
 R7
-R11
+R12
 R9
 Edmem
-R10
-Z12 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z13 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z14 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
-Z15 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z16 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+R11
+Z13 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z15 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z16 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z17 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 18
 R0
-Z17 8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd
-Z18 F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd
+Z18 8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd
+Z19 F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd
 l0
 L12 1
 V=VcFJ1ISz_H?1@fo;QFYO1
 !s100 9UhgcemjCI:F<bA>GRZY=0
-Z19 OV;C;2020.1;71
+Z20 OV;C;2020.1;71
 31
 R2
 !i10b 1
-R6
-Z20 !s90 -reportprogress|300|-93|-work|work|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd|
-Z21 !s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd|
+R10
+Z21 !s90 -reportprogress|300|-93|-work|work|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd|
+Z22 !s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd|
 !i113 1
-Z22 o-93 -work work
-Z23 tExplicit 1 CvgOpt 0
+Z23 o-93 -work work
+Z24 tExplicit 1 CvgOpt 0
 Abehave
-R12
 R13
 R14
 R15
 R16
+R17
 DEx4 work 4 dmem 0 22 =VcFJ1ISz_H?1@fo;QFYO1
 !i122 18
 l50
 L21 49
 VnM8aQ:=>gYVm<K;[K6<VQ1
 !s100 a2K;HL21gA:Y<M8M2VzYh0
-R19
+R20
 31
 R2
 !i10b 1
-R6
-R20
+R10
 R21
-!i113 1
 R22
+!i113 1
 R23
+R24
 vexecute
 R1
-R2
+Z25 !s110 1662739747
 !i10b 1
 !s100 z4k::6YbzZIGjzjlGYCif2
 R3
@@ -241,7 +241,7 @@ R8
 R9
 vfetch
 R1
-R2
+R25
 !i10b 1
 !s100 T1GZcF7P1nUmQTe0E=8_U0
 R3
@@ -267,7 +267,7 @@ R8
 R9
 vflopr
 R1
-R2
+R25
 !i10b 1
 !s100 FUkiY=<X6N5P2M<9OMQXb0
 R3
@@ -293,19 +293,19 @@ R8
 R9
 vimem
 R1
-R2
+R25
 !i10b 1
-!s100 nbZ?>VeBaW_630eQEfO`Y0
+!s100 PEnnAD_eKV46C]M1JiB>60
 R3
-IbUDCQRlMQNNYVB5h6j99n2
+I`CFoB;:?oaXZ6LnB11j4n3
 R4
 S1
 R0
-w1662726096
+w1662739712
 8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv
 F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv
 !i122 5
-L0 1 73
+L0 1 40
 R5
 r1
 !s85 0
@@ -319,7 +319,7 @@ R8
 R9
 vmaindec
 R1
-R2
+R25
 !i10b 1
 !s100 C1NSK60^4P[WH?99dhkAl0
 R3
@@ -353,7 +353,7 @@ I5WHY]Ph8TXQQ=cDZIoOOa2
 R4
 S1
 R0
-R10
+R11
 8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/memory.sv
 F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/memory.sv
 !i122 12
@@ -362,16 +362,16 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/memory.sv|
 !i113 1
 R7
-R11
+R12
 R9
 vmux2
 R1
-R2
+R25
 !i10b 1
 !s100 XfdfLdSb9dmK[VUYkeA:Q1
 R3
@@ -383,7 +383,7 @@ w1662392526
 8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/mux2.sv
 F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/mux2.sv
 !i122 2
-Z24 L0 3 8
+Z26 L0 3 8
 R5
 r1
 !s85 0
@@ -405,7 +405,7 @@ Ik4FR]_z27O1CP[f7o4aZV1
 R4
 S1
 R0
-R10
+R11
 8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv
 F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv
 !i122 11
@@ -414,24 +414,24 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv|
 !i113 1
 R7
-R11
+R12
 R9
 vprocessor_tb
 R1
 R2
 !i10b 1
-!s100 PaodzjGZUZTLfX[9HF==40
+!s100 Vc^Ti;1EFLEX3TGz>zZ>H1
 R3
-Ii6[hUb71fa8c=;>^hO1mV2
+IGRZS4ni>o2^9LkfOGPGjX3
 R4
 S1
 R0
-w1662726092
+w1662737323
 8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_tb.sv
 F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_tb.sv
 !i122 19
@@ -440,16 +440,16 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_tb.sv|
 !i113 1
 R7
-R11
+R12
 R9
 vregfile
 R1
-R2
+R25
 !i10b 1
 !s100 <<W_T?ZCmlDBHA>eWYdjn3
 R3
@@ -475,7 +475,7 @@ R8
 R9
 vsignext
 R1
-R2
+R25
 !i10b 1
 !s100 516:MERPbnE971nao[MF^1
 R3
@@ -501,7 +501,7 @@ R8
 R9
 vsl2
 R1
-R2
+R25
 !i10b 1
 !s100 `c@h0_TfTnn`3CajieZiC2
 R3
@@ -535,19 +535,19 @@ IoA5GbdJX1@[9mE5_a?<L`1
 R4
 S1
 R0
-R10
+R11
 8/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/writeback.sv
 F/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/writeback.sv
 !i122 17
-R24
+R26
 R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/writeback.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907|/home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/writeback.sv|
 !i113 1
 R7
-R11
+R12
 R9
