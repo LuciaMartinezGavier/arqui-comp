@@ -1,0 +1,4 @@
+- Escribir el programa en main.s
+- Comando "make" para obtener las instrucciones ensambladas en main.list
+- Agradecer a sus predecesores y usar el comando "./process.sh" para obtener las instrucciones en el formato para cargar directamente en imem.
+- Comando "make clean" para borrar los archivos generados.
