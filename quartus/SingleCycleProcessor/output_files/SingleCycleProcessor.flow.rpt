@@ -1,5 +1,5 @@
 Flow report for SingleCycleProcessor
-Mon Aug 29 21:28:10 2022
+Mon Sep  5 16:07:11 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Aug 29 21:28:10 2022       ;
+; Flow Status                        ; Successful - Mon Sep  5 16:07:11 2022       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; SingleCycleProcessor                        ;
-; Top-level Entity Name              ; imem                                        ;
+; Top-level Entity Name              ; execute                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 106                                         ;
-;     Total combinational functions  ; 106                                         ;
+; Total logic elements               ; 476                                         ;
+;     Total combinational functions  ; 476                                         ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 38                                          ;
+; Total pins                         ; 454                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 08/29/2022 21:28:03  ;
+; Start date & time ; 09/05/2022 16:07:04  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; SingleCycleProcessor ;
 +-------------------+----------------------+
@@ -74,25 +74,37 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+----------------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value        ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+----------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 167417731879719.166181928317563        ; --                   ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 167417731879719.166240482404871        ; --                   ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; regfile_tb                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; imem_tb                           ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; fetch_tb                          ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; maindec_tb                        ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                   ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                   ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                   ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                   ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; imem_tb                                ; --                   ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; fetch_tb                               ; --                   ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --                   ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>               ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; regfile_tb.sv                          ; --                   ; --          ; regfile_tb                        ;
 ; EDA_TEST_BENCH_FILE                  ; imem_tb.sv                             ; --                   ; --          ; imem_tb                           ;
+; EDA_TEST_BENCH_FILE                  ; fetch_tb.sv                            ; --                   ; --          ; fetch_tb                          ;
+; EDA_TEST_BENCH_FILE                  ; maindec_tb.sv                          ; --                   ; --          ; maindec_tb                        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; regfile_tb                             ; --                   ; --          ; regfile_tb                        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; imem_tb                                ; --                   ; --          ; imem_tb                           ;
+; EDA_TEST_BENCH_MODULE_NAME           ; fetch_tb                               ; --                   ; --          ; fetch_tb                          ;
+; EDA_TEST_BENCH_MODULE_NAME           ; maindec_tb                             ; --                   ; --          ; maindec_tb                        ;
 ; EDA_TEST_BENCH_NAME                  ; imem_tb                                ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; regfile_tb                             ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; maindec_tb                             ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; fetch_tb                               ; --                   ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --                   ; --          ; eda_simulation                    ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --                   ; imem        ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --                   ; imem        ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --                   ; imem        ; Top                               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --                   ; execute     ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --                   ; execute     ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --                   ; execute     ; Top                               ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --                   ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; imem                                   ; SingleCycleProcessor ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; execute                                ; SingleCycleProcessor ; --          ; --                                ;
 +--------------------------------------+----------------------------------------+----------------------+-------------+-----------------------------------+
 
 
@@ -101,8 +113,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 389 MB              ; 00:00:19                           ;
-; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:19                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 391 MB              ; 00:00:18                           ;
+; Total                ; 00:00:06     ; --                      ; --                  ; 00:00:18                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

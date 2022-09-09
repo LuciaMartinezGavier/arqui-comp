@@ -47,7 +47,7 @@ module imem #(parameter N = 32)
         32'h8b1403de,        // ADD X30, X30, X20
         32'hf85f83d9,        // LDUR X25, [X30, #-8]
         32'h8b1e03de,        // ADD X30, X30, X30
-        32'h8b1003de,        // ADD X30, X30, X16
+        32'h    8b1003de,        // ADD X30, X30, X16
         32'hf81f83d9,        // STUR X25, [X30, #-8]
         32'hb400001f,        // finloop: CBZ XZR, finloop
         32'h0,
@@ -68,6 +68,6 @@ module imem #(parameter N = 32)
         32'h0,
         32'h0
     };
-
+    // FIXME: poner default 0 y después rellenar
     assign q = ROM[addr];
 endmodule

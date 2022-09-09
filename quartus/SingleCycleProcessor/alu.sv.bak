@@ -1,6 +1,0 @@
-module alu (input  logic [63:0] a, b,
-				input  logic [3:0] ALUControl,
-				output logic [63:0] result,
-				output logic zero);
-
-endmodule

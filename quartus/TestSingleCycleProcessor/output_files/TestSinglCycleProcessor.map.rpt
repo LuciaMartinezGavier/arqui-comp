@@ -1,0 +1,627 @@
+Analysis & Synthesis report for TestSinglCycleProcessor
+Fri Sep  9 09:21:48 2022
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |processor_arm
+ 12. Parameter Settings for User Entity Instance: datapath:dp
+ 13. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH
+ 14. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|flopr:flop
+ 15. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|mux2:mux
+ 16. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|adder:add
+ 17. Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE
+ 18. Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE|mux2:ra2mux
+ 19. Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE|regfile:registers
+ 20. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE
+ 21. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|adder:add
+ 22. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|sl2:shift
+ 23. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|alu:ALU
+ 24. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|mux2:mux
+ 25. Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK
+ 26. Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK|mux2:MtoRmux
+ 27. Parameter Settings for User Entity Instance: imem:instrMem
+ 28. Port Connectivity Checks: "datapath:dp|fetch:FETCH|adder:add"
+ 29. Port Connectivity Checks: "datapath:dp"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Sep  9 09:21:48 2022       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; TestSinglCycleProcessor                     ;
+; Top-level Entity Name              ; processor_arm                               ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 12,178                                      ;
+;     Total combinational functions  ; 6,237                                       ;
+;     Dedicated logic registers      ; 6,150                                       ;
+; Total registers                    ; 6150                                        ;
+; Total pins                         ; 132                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                   ;
++------------------------------------------------------------------+--------------------+-------------------------+
+; Option                                                           ; Setting            ; Default Value           ;
++------------------------------------------------------------------+--------------------+-------------------------+
+; Top-level entity name                                            ; processor_arm      ; TestSinglCycleProcessor ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V               ;
+; Use smart compilation                                            ; Off                ; Off                     ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                      ;
+; Enable compact report table                                      ; Off                ; Off                     ;
+; Restructure Multiplexers                                         ; Auto               ; Auto                    ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                     ;
+; Preserve fewer node names                                        ; On                 ; On                      ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable                  ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001            ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993               ;
+; State Machine Processing                                         ; Auto               ; Auto                    ;
+; Safe State Machine                                               ; Off                ; Off                     ;
+; Extract Verilog State Machines                                   ; On                 ; On                      ;
+; Extract VHDL State Machines                                      ; On                 ; On                      ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                     ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000                    ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                     ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                      ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                      ;
+; Parallel Synthesis                                               ; On                 ; On                      ;
+; DSP Block Balancing                                              ; Auto               ; Auto                    ;
+; NOT Gate Push-Back                                               ; On                 ; On                      ;
+; Power-Up Don't Care                                              ; On                 ; On                      ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                     ;
+; Remove Duplicate Registers                                       ; On                 ; On                      ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                     ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                     ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                     ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                     ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                     ;
+; Ignore SOFT Buffers                                              ; On                 ; On                      ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                     ;
+; Optimization Technique                                           ; Balanced           ; Balanced                ;
+; Carry Chain Length                                               ; 70                 ; 70                      ;
+; Auto Carry Chains                                                ; On                 ; On                      ;
+; Auto Open-Drain Pins                                             ; On                 ; On                      ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                     ;
+; Auto ROM Replacement                                             ; On                 ; On                      ;
+; Auto RAM Replacement                                             ; On                 ; On                      ;
+; Auto DSP Block Replacement                                       ; On                 ; On                      ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto                    ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto                    ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                      ;
+; Strict RAM Replacement                                           ; Off                ; Off                     ;
+; Allow Synchronous Control Signals                                ; On                 ; On                      ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                     ;
+; Auto RAM Block Balancing                                         ; On                 ; On                      ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                     ;
+; Auto Resource Sharing                                            ; Off                ; Off                     ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                     ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                     ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                     ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                      ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                     ;
+; Timing-Driven Synthesis                                          ; On                 ; On                      ;
+; Report Parameter Settings                                        ; On                 ; On                      ;
+; Report Source Assignments                                        ; On                 ; On                      ;
+; Report Connectivity Checks                                       ; On                 ; On                      ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                     ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                       ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation      ;
+; HDL message level                                                ; Level2             ; Level2                  ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                     ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000                    ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000                    ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                     ;
+; Clock MUX Protection                                             ; On                 ; On                      ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                     ;
+; Block Design Naming                                              ; Auto               ; Auto                    ;
+; SDC constraint protection                                        ; Off                ; Off                     ;
+; Synthesis Effort                                                 ; Auto               ; Auto                    ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                      ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                     ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium                  ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto                    ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                      ;
++------------------------------------------------------------------+--------------------+-------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.2%      ;
+;     Processor 4            ;   0.2%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                ;
++--------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                        ; Library ;
++--------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; ../SingleCycleProcessor/sl2.sv       ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/sl2.sv                                   ;         ;
+; ../SingleCycleProcessor/signext.sv   ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/signext.sv                               ;         ;
+; ../SingleCycleProcessor/mux2.sv      ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/mux2.sv                                  ;         ;
+; ../SingleCycleProcessor/regfile.sv   ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/regfile.sv                               ;         ;
+; ../SingleCycleProcessor/maindec.sv   ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/maindec.sv                               ;         ;
+; ../SingleCycleProcessor/imem.sv      ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv                                  ;         ;
+; ../SingleCycleProcessor/flopr.sv     ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/flopr.sv                                 ;         ;
+; ../SingleCycleProcessor/fetch.sv     ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/fetch.sv                                 ;         ;
+; ../SingleCycleProcessor/execute.sv   ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/execute.sv                               ;         ;
+; ../SingleCycleProcessor/adder.sv     ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/adder.sv                                 ;         ;
+; ../SingleCycleProcessor/alu.sv       ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/alu.sv                                   ;         ;
+; ModulosTP2-20220907/processor_arm.sv ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv ;         ;
+; ModulosTP2-20220907/memory.sv        ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/memory.sv        ;         ;
+; ModulosTP2-20220907/dmem.vhd         ; yes             ; User VHDL File               ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd         ;         ;
+; ModulosTP2-20220907/decode.sv        ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/decode.sv        ;         ;
+; ModulosTP2-20220907/datapath.sv      ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv      ;         ;
+; ModulosTP2-20220907/controller.sv    ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/controller.sv    ;         ;
+; ModulosTP2-20220907/aludec.sv        ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/aludec.sv        ;         ;
+; ModulosTP2-20220907/writeback.sv     ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/writeback.sv     ;         ;
++--------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 12,178         ;
+;                                             ;                ;
+; Total combinational functions               ; 6237           ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 5884           ;
+;     -- 3 input functions                    ; 268            ;
+;     -- <=2 input functions                  ; 85             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 6168           ;
+;     -- arithmetic mode                      ; 69             ;
+;                                             ;                ;
+; Total registers                             ; 6150           ;
+;     -- Dedicated logic registers            ; 6150           ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 132            ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 6150           ;
+; Total fan-out                               ; 43146          ;
+; Average fan-out                             ; 3.41           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                  ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Entity Name   ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+---------------+--------------+
+; |processor_arm               ; 6237 (0)            ; 6150 (0)                  ; 0           ; 0            ; 0       ; 0         ; 132  ; 0            ; |processor_arm                                              ; processor_arm ; work         ;
+;    |controller:c|            ; 27 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|controller:c                                 ; controller    ; work         ;
+;       |aludec:decAlu|        ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|controller:c|aludec:decAlu                   ; aludec        ; work         ;
+;       |maindec:decPpal|      ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|controller:c|maindec:decPpal                 ; maindec       ; work         ;
+;    |datapath:dp|             ; 6033 (0)            ; 2054 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp                                  ; datapath      ; work         ;
+;       |decode:DECODE|        ; 2835 (0)            ; 2048 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE                    ; decode        ; work         ;
+;          |mux2:ra2mux|       ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|mux2:ra2mux        ; mux2          ; work         ;
+;          |regfile:registers| ; 2830 (2830)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|regfile:registers  ; regfile       ; work         ;
+;       |execute:EXECUTE|      ; 418 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE                  ; execute       ; work         ;
+;          |adder:add|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE|adder:add        ; adder         ; work         ;
+;          |alu:ALU|           ; 390 (390)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE|alu:ALU          ; alu           ; work         ;
+;          |mux2:mux|          ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE|mux2:mux         ; mux2          ; work         ;
+;       |fetch:FETCH|          ; 6 (0)               ; 6 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|fetch:FETCH                      ; fetch         ; work         ;
+;          |flopr:flop|        ; 6 (6)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|fetch:FETCH|flopr:flop           ; flopr         ; work         ;
+;       |memory:MEMORY|        ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|memory:MEMORY                    ; memory        ; work         ;
+;       |writeback:WRITEBACK|  ; 2752 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|writeback:WRITEBACK              ; writeback     ; work         ;
+;          |mux2:MtoRmux|      ; 2752 (2752)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|writeback:WRITEBACK|mux2:MtoRmux ; mux2          ; work         ;
+;    |dmem:dataMem|            ; 72 (72)             ; 4096 (4096)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|dmem:dataMem                                 ; dmem          ; work         ;
+;    |imem:instrMem|           ; 105 (105)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|imem:instrMem                                ; imem          ; work         ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                ;
++---------------------------------------------+-----------------------------------------------------+
+; Register name                               ; Reason for Removal                                  ;
++---------------------------------------------+-----------------------------------------------------+
+; datapath:dp|fetch:FETCH|flopr:flop|q[0]     ; Merged with datapath:dp|fetch:FETCH|flopr:flop|q[1] ;
+; datapath:dp|fetch:FETCH|flopr:flop|q[1]     ; Stuck at GND due to stuck port data_in              ;
+; datapath:dp|fetch:FETCH|flopr:flop|q[8..63] ; Lost fanout                                         ;
+; Total Number of Removed Registers = 58      ;                                                     ;
++---------------------------------------------+-----------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 6150  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 6     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 6144  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; 8:1                ; 64 bits   ; 320 LEs       ; 256 LEs              ; 64 LEs                 ; No         ; |processor_arm|datapath:dp|execute:EXECUTE|alu:ALU|Mux63          ;
+; 65:1               ; 64 bits   ; 2752 LEs      ; 2752 LEs             ; 0 LEs                  ; No         ; |processor_arm|datapath:dp|writeback:WRITEBACK|mux2:MtoRmux|y[46] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |processor_arm ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; N              ; 64    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 64    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|flopr:flop ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|mux2:mux ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|adder:add ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 64    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE|mux2:ra2mux ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 5     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE|regfile:registers ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; N              ; 64    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|adder:add ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|sl2:shift ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|alu:ALU ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|mux2:mux ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; N              ; 64    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK|mux2:MtoRmux ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: imem:instrMem ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; N              ; 32    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|fetch:FETCH|adder:add" ;
++----------+-------+----------+---------------------------------+
+; Port     ; Type  ; Severity ; Details                         ;
++----------+-------+----------+---------------------------------+
+; b[63..3] ; Input ; Info     ; Stuck at GND                    ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                    ;
+; b[2]     ; Input ; Info     ; Stuck at VCC                    ;
++----------+-------+----------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp"                                                                                  ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; IM_addr[63..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; IM_addr[1..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 132                         ;
+; cycloneiii_ff         ; 6150                        ;
+;     CLR               ; 6                           ;
+;     ENA               ; 6144                        ;
+; cycloneiii_lcell_comb ; 6237                        ;
+;     arith             ; 69                          ;
+;         3 data inputs ; 69                          ;
+;     normal            ; 6168                        ;
+;         1 data inputs ; 75                          ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 199                         ;
+;         4 data inputs ; 5884                        ;
+;                       ;                             ;
+; Max LUT depth         ; 24.30                       ;
+; Average LUT depth     ; 14.12                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:19     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Fri Sep  9 09:21:22 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TestSinglCycleProcessor -c TestSinglCycleProcessor
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/sl2.sv
+    Info (12023): Found entity 1: sl2 File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/sl2.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/signext.sv
+    Info (12023): Found entity 1: signext File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/signext.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/mux2.sv
+    Info (12023): Found entity 1: mux2 File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/mux2.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/regfile.sv
+    Info (12023): Found entity 1: regfile File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/regfile.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/maindec.sv
+    Info (12023): Found entity 1: maindec File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/maindec.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv
+    Info (12023): Found entity 1: imem File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/flopr.sv
+    Info (12023): Found entity 1: flopr File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/flopr.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/fetch.sv
+    Info (12023): Found entity 1: fetch File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/fetch.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/execute.sv
+    Info (12023): Found entity 1: execute File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/execute.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/adder.sv
+    Info (12023): Found entity 1: adder File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/adder.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/alu.sv
+    Info (12023): Found entity 1: alu File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/alu.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ModulosTP2-20220907/processor_tb.sv
+    Info (12023): Found entity 1: processor_tb File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_tb.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file ModulosTP2-20220907/processor_arm.sv
+    Info (12023): Found entity 1: processor_arm File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ModulosTP2-20220907/memory.sv
+    Info (12023): Found entity 1: memory File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/memory.sv Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file ModulosTP2-20220907/dmem.vhd
+    Info (12022): Found design unit 1: dmem-behave File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd Line: 21
+    Info (12023): Found entity 1: dmem File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file ModulosTP2-20220907/decode.sv
+    Info (12023): Found entity 1: decode File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/decode.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ModulosTP2-20220907/datapath.sv
+    Info (12023): Found entity 1: datapath File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ModulosTP2-20220907/controller.sv
+    Info (12023): Found entity 1: controller File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/controller.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ModulosTP2-20220907/aludec.sv
+    Info (12023): Found entity 1: aludec File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/aludec.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ModulosTP2-20220907/writeback.sv
+    Info (12023): Found entity 1: writeback File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/writeback.sv Line: 3
+Info (12127): Elaborating entity "processor_arm" for the top level hierarchy
+Info (12128): Elaborating entity "controller" for hierarchy "controller:c" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv Line: 23
+Info (12128): Elaborating entity "maindec" for hierarchy "controller:c|maindec:decPpal" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/controller.sv Line: 18
+Info (12128): Elaborating entity "aludec" for hierarchy "controller:c|aludec:decAlu" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/controller.sv Line: 23
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dp" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv Line: 42
+Info (12128): Elaborating entity "fetch" for hierarchy "datapath:dp|fetch:FETCH" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv Line: 28
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|fetch:FETCH|flopr:flop" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/fetch.sv Line: 8
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|fetch:FETCH|mux2:mux" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/fetch.sv Line: 9
+Info (12128): Elaborating entity "adder" for hierarchy "datapath:dp|fetch:FETCH|adder:add" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/fetch.sv Line: 10
+Info (12128): Elaborating entity "decode" for hierarchy "datapath:dp|decode:DECODE" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv Line: 39
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|decode:DECODE|mux2:ra2mux" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/decode.sv Line: 11
+Info (12128): Elaborating entity "regfile" for hierarchy "datapath:dp|decode:DECODE|regfile:registers" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/decode.sv Line: 14
+Info (12128): Elaborating entity "signext" for hierarchy "datapath:dp|decode:DECODE|signext:ext" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/decode.sv Line: 17
+Info (12128): Elaborating entity "execute" for hierarchy "datapath:dp|execute:EXECUTE" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv Line: 52
+Info (12128): Elaborating entity "sl2" for hierarchy "datapath:dp|execute:EXECUTE|sl2:shift" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/execute.sv Line: 12
+Info (12128): Elaborating entity "alu" for hierarchy "datapath:dp|execute:EXECUTE|alu:ALU" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/execute.sv Line: 13
+Info (12128): Elaborating entity "memory" for hierarchy "datapath:dp|memory:MEMORY" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv Line: 58
+Info (12128): Elaborating entity "writeback" for hierarchy "datapath:dp|writeback:WRITEBACK" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv Line: 65
+Info (12128): Elaborating entity "imem" for hierarchy "imem:instrMem" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv Line: 46
+Warning (10030): Net "ROM.data_a" at imem.sv(70) has no driver or initial value, using a default initial value '0' File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv Line: 70
+Warning (10030): Net "ROM.waddr_a" at imem.sv(70) has no driver or initial value, using a default initial value '0' File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv Line: 70
+Warning (10030): Net "ROM.we_a" at imem.sv(70) has no driver or initial value, using a default initial value '0' File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv Line: 70
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dataMem" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv Line: 55
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "datapath:dp|decode:DECODE|regfile:registers|rf" is uninferred due to asynchronous read logic File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/regfile.sv Line: 19
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 56 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "dump" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv Line: 7
+Info (21057): Implemented 12438 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 129 output pins
+    Info (21061): Implemented 12306 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 474 megabytes
+    Info: Processing ended: Fri Sep  9 09:21:48 2022
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:34
+
+

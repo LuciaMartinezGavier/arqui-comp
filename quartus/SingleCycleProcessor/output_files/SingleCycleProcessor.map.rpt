@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SingleCycleProcessor
-Mon Aug 29 21:28:10 2022
+Mon Sep  5 16:07:11 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,10 +14,13 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |imem
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: adder:add
+ 11. Parameter Settings for User Entity Instance: sl2:shift
+ 12. Parameter Settings for User Entity Instance: mux2:mux
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +47,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Aug 29 21:28:10 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon Sep  5 16:07:11 2022       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; SingleCycleProcessor                        ;
-; Top-level Entity Name              ; imem                                        ;
+; Top-level Entity Name              ; execute                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 106                                         ;
-;     Total combinational functions  ; 106                                         ;
+; Total logic elements               ; 476                                         ;
+;     Total combinational functions  ; 476                                         ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 38                                          ;
+; Total pins                         ; 454                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -66,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+----------------------+
 ; Option                                                           ; Setting            ; Default Value        ;
 +------------------------------------------------------------------+--------------------+----------------------+
-; Top-level entity name                                            ; imem               ; SingleCycleProcessor ;
+; Top-level entity name                                            ; execute            ; SingleCycleProcessor ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V            ;
 ; Use smart compilation                                            ; Off                ; Off                  ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                   ;
@@ -162,45 +165,49 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
-; imem.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
+; alu.sv                           ; yes             ; User SystemVerilog HDL File        ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/alu.sv     ;         ;
+; execute.sv                       ; yes             ; User SystemVerilog HDL File        ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/execute.sv ;         ;
+; adder.sv                         ; yes             ; Auto-Found SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/adder.sv   ;         ;
+; sl2.sv                           ; yes             ; Auto-Found SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/sl2.sv     ;         ;
+; mux2.sv                          ; yes             ; Auto-Found SystemVerilog HDL File  ; /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/mux2.sv    ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 106           ;
-;                                             ;               ;
-; Total combinational functions               ; 106           ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 98            ;
-;     -- 3 input functions                    ; 7             ;
-;     -- <=2 input functions                  ; 1             ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 106           ;
-;     -- arithmetic mode                      ; 0             ;
-;                                             ;               ;
-; Total registers                             ; 0             ;
-;     -- Dedicated logic registers            ; 0             ;
-;     -- I/O registers                        ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 38            ;
-;                                             ;               ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; addr[2]~input ;
-; Maximum fan-out                             ; 60            ;
-; Total fan-out                               ; 485           ;
-; Average fan-out                             ; 2.66          ;
-+---------------------------------------------+---------------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 476             ;
+;                                             ;                 ;
+; Total combinational functions               ; 476             ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 282             ;
+;     -- 3 input functions                    ; 191             ;
+;     -- <=2 input functions                  ; 3               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 351             ;
+;     -- arithmetic mode                      ; 125             ;
+;                                             ;                 ;
+; Total registers                             ; 0               ;
+;     -- Dedicated logic registers            ; 0               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 454             ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; alu:ALU|Mux14~2 ;
+; Maximum fan-out                             ; 128             ;
+; Total fan-out                               ; 2354            ;
+; Average fan-out                             ; 1.70            ;
++---------------------------------------------+-----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -208,7 +215,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |imem                      ; 106 (106)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |imem               ; imem        ; work         ;
+; |execute                   ; 476 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 454  ; 0            ; |execute            ; execute     ; work         ;
+;    |adder:add|             ; 62 (62)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |execute|adder:add  ; adder       ; work         ;
+;    |alu:ALU|               ; 350 (350)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |execute|alu:ALU    ; alu         ; work         ;
+;    |mux2:mux|              ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |execute|mux2:mux   ; mux2        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -228,13 +238,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |imem ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; N              ; 32    ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 11:1               ; 64 bits   ; 448 LEs       ; 192 LEs              ; 256 LEs                ; No         ; |execute|alu:ALU|Mux14     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder:add ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; N              ; 64    ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sl2:shift ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; N              ; 64    ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2:mux ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; N              ; 64    ; Signed Integer               ;
++----------------+-------+------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -243,15 +282,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 38                          ;
-; cycloneiii_lcell_comb ; 106                         ;
-;     normal            ; 106                         ;
+; boundary_port         ; 454                         ;
+; cycloneiii_lcell_comb ; 477                         ;
+;     arith             ; 125                         ;
 ;         2 data inputs ; 1                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 98                          ;
+;         3 data inputs ; 124                         ;
+;     normal            ; 352                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 67                          ;
+;         4 data inputs ; 282                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.71                        ;
+; Max LUT depth         ; 14.30                       ;
+; Average LUT depth     ; 9.94                        ;
 +-----------------------+-----------------------------+
 
 
@@ -270,7 +313,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Aug 29 21:28:02 2022
+    Info: Processing started: Mon Sep  5 16:07:04 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SingleCycleProcessor -c SingleCycleProcessor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -290,23 +333,40 @@ Info (12021): Found 1 design units, including 1 entities, in source file imem.sv
     Info (12023): Found entity 1: imem File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file imem_tb.sv
     Info (12023): Found entity 1: imem_tb File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem_tb.sv Line: 1
-Info (12127): Elaborating entity "imem" for the top level hierarchy
-Warning (10030): Net "ROM.data_a" at imem.sv(70) has no driver or initial value, using a default initial value '0' File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv Line: 70
-Warning (10030): Net "ROM.waddr_a" at imem.sv(70) has no driver or initial value, using a default initial value '0' File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv Line: 70
-Warning (10030): Net "ROM.we_a" at imem.sv(70) has no driver or initial value, using a default initial value '0' File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv Line: 70
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "ROM" is uninferred due to asynchronous read logic File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem.sv Line: 70
+Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
+    Info (12023): Found entity 1: regfile File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/regfile.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file regfile_tb.sv
+    Info (12023): Found entity 1: regfile_tb File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/regfile_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file maindec.sv
+    Info (12023): Found entity 1: maindec File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/maindec.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fetch.sv
+    Info (12023): Found entity 1: fetch File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/fetch.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fetch_tb.sv
+    Info (12023): Found entity 1: fetch_tb File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/fetch_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file execute.sv
+    Info (12023): Found entity 1: execute File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/execute.sv Line: 1
+Info (12127): Elaborating entity "execute" for the top level hierarchy
+Warning (12125): Using design file adder.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: adder File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/adder.sv Line: 3
+Info (12128): Elaborating entity "adder" for hierarchy "adder:add" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/execute.sv Line: 10
+Warning (12125): Using design file sl2.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: sl2 File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/sl2.sv Line: 3
+Info (12128): Elaborating entity "sl2" for hierarchy "sl2:shift" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/execute.sv Line: 11
+Info (12128): Elaborating entity "alu" for hierarchy "alu:ALU" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/execute.sv Line: 12
+Warning (12125): Using design file mux2.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: mux2 File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/mux2.sv Line: 3
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:mux" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/execute.sv Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 144 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 106 logic cells
+Info (21057): Implemented 930 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 261 input pins
+    Info (21059): Implemented 193 output pins
+    Info (21061): Implemented 476 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 394 megabytes
-    Info: Processing ended: Mon Aug 29 21:28:10 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 398 megabytes
+    Info: Processing ended: Mon Sep  5 16:07:11 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:18
 
 
