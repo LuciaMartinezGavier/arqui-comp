@@ -34,17 +34,17 @@ con 4.
 ## 📑️ Índice
 
 ### Práctico
-- [x] Repaso: [[LEGv8-ISA]]
-- [x] Hardware Description Languages (HDL): [[hdl-verilog]]
-- [x] Introducción a las FPGAs: [[intro-FPGAs]]
-- [x] I/O [[Arquitectura/arqui-comp/practico/interfacing]]
+- [x] Repaso: [[2-LEGv8-ISA]]
+- [x] Hardware Description Languages (HDL): [[3-hdl-verilog]]
+- [x] Introducción a las FPGAs: [[1-intro-FPGAs]]
+- [x] I/O [[4-excepciones]]
 
 ### Teórico
 ### **Computación SISD ("Single Instruction, Single Data")**
 - [ ] Arquitecturas tipo SISD, subtipo RISC (Reduced Instruction Set Computer)
 - [ ] Arquitecturas tipo SISD, Subtipo CISC (Complex Instruction Set Computer)
 - [ ] Ejemplos de Arquitecturas SISD tipo No-Von Neumann
-- [x] Concepto de Segmentación encausada, (Pipeline) [[Arquitectura/arqui-comp/teórico/pipelines]]
+- [x] Concepto de Segmentación encausada, (Pipeline) [[5-pipelines]]
 - [ ] Ejemplos de Arquitecturas SISD, RISC
 - [ ] Ejemplos de Arquitecturas SISD, CISC
 - [ ] Arquitectura y Set de Instrucciones de Procesadores con Pipeline
