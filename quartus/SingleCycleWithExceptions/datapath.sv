@@ -5,7 +5,7 @@ module datapath #(parameter N = 64)
     input logic [1:0] AluSrc,
     input logic [3:0] AluControl, EStatus,
     input logic reg2loc, ERet, memRead, memWrite, regWrite,
-				branch, memtoReg, Exc,
+				Branch, memtoReg, Exc,
     input logic [31:0] IM_readData,
     input logic [N-1:0] DM_readData,
 

@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE auto
-set_global_assignment -name TOP_LEVEL_ENTITY exception
+set_global_assignment -name TOP_LEVEL_ENTITY processor_arm
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:09:56  SEPTIEMBRE 14, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -52,23 +52,26 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH comp_n_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH processor_arm_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME flopr_e_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id flopr_e_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME flopr_e_tb -section_id flopr_e_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME mux4_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mux4_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mux4_tb -section_id mux4_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE flopr_e_tb.sv -section_id flopr_e_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE mux4_tb.sv -section_id mux4_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME comp_n_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id comp_n_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME comp_n_tb -section_id comp_n_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE comp_n_tb.sv -section_id comp_n_tb
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE processor_arm_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE processor_arm.sv
+set_global_assignment -name SYSTEMVERILOG_FILE controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE execute.sv
+set_global_assignment -name SYSTEMVERILOG_FILE fetch.sv
+set_global_assignment -name SYSTEMVERILOG_FILE datapath.sv
 set_global_assignment -name SYSTEMVERILOG_FILE maindec.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux4_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../SingleCycleProcessor/sl2.sv
@@ -77,16 +80,11 @@ set_global_assignment -name SYSTEMVERILOG_FILE ../SingleCycleProcessor/regfile.s
 set_global_assignment -name SYSTEMVERILOG_FILE ../SingleCycleProcessor/mux2.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../SingleCycleProcessor/imem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../SingleCycleProcessor/flopr.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../SingleCycleProcessor/fetch.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../SingleCycleProcessor/execute.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../SingleCycleProcessor/alu.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../SingleCycleProcessor/adder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE "../TestSingleCycleProcessor/ModulosTP2-20220907/processor_arm.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "../TestSingleCycleProcessor/ModulosTP2-20220907/memory.sv"
 set_global_assignment -name VHDL_FILE "../TestSingleCycleProcessor/ModulosTP2-20220907/dmem.vhd"
 set_global_assignment -name SYSTEMVERILOG_FILE "../TestSingleCycleProcessor/ModulosTP2-20220907/decode.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "../TestSingleCycleProcessor/ModulosTP2-20220907/datapath.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "../TestSingleCycleProcessor/ModulosTP2-20220907/controller.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "../TestSingleCycleProcessor/ModulosTP2-20220907/aludec.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "../TestSingleCycleProcessor/ModulosTP2-20220907/writeback.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE flopr_e_tb.sv
@@ -96,3 +94,10 @@ set_global_assignment -name SYSTEMVERILOG_FILE esync.sv
 set_global_assignment -name SYSTEMVERILOG_FILE comp_n.sv
 set_global_assignment -name SYSTEMVERILOG_FILE comp_n_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE exception.sv
+set_global_assignment -name EDA_TEST_BENCH_FILE flopr_e_tb.sv -section_id flopr_e_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE mux4_tb.sv -section_id mux4_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE comp_n_tb.sv -section_id comp_n_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME processor_arm_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id processor_arm_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME processor_arm_tb -section_id processor_arm_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE processor_arm_tb.sv -section_id processor_arm_tb
