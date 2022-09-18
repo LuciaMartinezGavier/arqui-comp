@@ -1,5 +1,0 @@
-Warning (10273): Verilog HDL warning at flopr_tb.sv(45): extended using "x" or "z" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/flopr_tb.sv Line: 45
-Warning (10273): Verilog HDL warning at signext_tb.sv(48): extended using "x" or "z" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/signext_tb.sv Line: 48
-Warning (10273): Verilog HDL warning at alu_tb.sv(71): extended using "x" or "z" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/alu_tb.sv Line: 71
-Warning (10273): Verilog HDL warning at imem_tb.sv(88): extended using "x" or "z" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/imem_tb.sv Line: 88
-Warning (10273): Verilog HDL warning at regfile_tb.sv(95): extended using "x" or "z" File: /home/lucia/Documents/Arquitectura/arqui-comp/quartus/SingleCycleProcessor/regfile_tb.sv Line: 95
