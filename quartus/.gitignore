@@ -1,0 +1,14 @@
+# compressed files
+*.tar*
+*.zip
+
+# backups
+*.bak
+
+# QUARTUS files
+*.qws
+*.rpt
+**/db/*
+**/incremental_db/*
+**/output_files/*
+**/simulation/*
